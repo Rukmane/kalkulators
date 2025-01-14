@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulators</title>
+</head>
+<body>
+    <button type="button" onclick="kalkulators()">Rādīt darbības rezultātu!</button>
+    <h1 id="rezultats">Darbības rezultāts: </h1>
+</body>
+<script>
+    let a = Number(prompt("Ievadi 1. skaitli"));
+    let b = Number(prompt("Ievadi 2. skaitli"));
+    let darb = prompt("ievadi darbību (+, -, *, /, %)");
+    //parāda ekrānā ievadītās vērtības
+    function kalkulators(a,b,darb){
+        if (darb=="+")
+        return a+b;
+        else if (darb=="-")
+        return a-b;
+        else if (darb=="*")
+        return a*b;
+        else if (darb=="/"){
+            if (b==0)
+        return a/b;
+        }
+        document.getElementById("rezultats").innerHTML = "Darbības rezultāts: "+atbilde 
+    }
+    let atbilde=kalkulators(a, b, darb);
+</script>
+</html>
+
