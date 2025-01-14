@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konvertors</title>
+</head>
+<body>
+    <h1>Dažādu lielumu pārveidošana</h1>
+    <h3>Ievadi skaitli <input type="number" id="skaitlis"> un mērvienību <input type="text" id="merv"></h3>
+    <h2><u>Garumu pārveidošana</u></h2>
+    <p>
+        <button type="button" onclick="mm()">Pārveidot milimetros</button>
+        <button type="button" onclick="cm()">Pārveidot centimetros</button>
+        <button type="button" onclick="dm()">Pārveidot decimetros</button>
+        <button type="button" onclick="m()">Pārveidot metros</button>
+        <button type="button" onclick="km()">Pārveidot kilometros</button>
+    </p>
+    
+    <h2><u>Svaru pārveidošana</u></h2>
+    <h2><u>Tilpumu pārveidošana</u></h2>
+    <h2><u>Laukumu pārveidošana</u></h2>
+    <h3 id="atb">Rezultāts: </h3>
+</body>
+<script>
+    let ievade=skaitlis.value;
+    let mervieniba=merv.value;
+    let atbilde;
+    function mm(ievade,mervieniba){
+        if(mervieniba=="cm")
+        atbilde=ievade*10;
+        //return ievade*10;
+        document.getElementById("atb").innerHTML="Rezultāts: "+atbilde;
+        //"Rezultāts: "+atbilde_1+" cm";
+    }
+    let atbilde_1=mm(ievade,mervieniba);
+</script>
+</html>
