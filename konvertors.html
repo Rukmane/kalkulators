@@ -23,16 +23,14 @@
     <h3 id="atb">Rezultāts: </h3>
 </body>
 <script>
-    let ievade=skaitlis.value;
-    let mervieniba=merv.value;
+   function mm(){
+    let ievade = document.getElementById("skaitlis").value;
+    let mervieniba = document.getElementById("merv").value;
+    ievade = parseFloat(ievade);
     let atbilde;
-    function mm(ievade,mervieniba){
         if(mervieniba=="cm")
         atbilde=ievade*10;
-        //return ievade*10;
-        document.getElementById("atb").innerHTML="Rezultāts: "+atbilde;
-        //"Rezultāts: "+atbilde_1+" cm";
+        document.getElementById("atb").innerHTML="Rezultāts: "+atbilde+" mm";
     }
-    let atbilde_1=mm(ievade,mervieniba);
 </script>
 </html>
