@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funkcijas</title>
+</head>
+<body>
+    <p id="kvadratvienadojums"></p>
+    <p id="diskriminants"></p>
+    <p id="sakne1"></p>
+    <p id="sakne2"></p>
+    <button type="button" onclick="equation(a,b,c)">Risināt!</button>
+</body>
+<script>
+let a = Math.floor(Math.random()*3);
+let b = Math.floor(Math.random()*5)-2;
+let c = Math.floor(Math.random()*5)-2;
+document.getElementById("kvadratvienadojums").innerHTML="Atrisini doto kvadrātvienādojumu!<br>"+a+"x^2 + "+b+"x + "+c+" = 0";
+
+function equation(a, b, c){
+    
+    let D = b*b-4*a*c;
+    let x1 = (-1*b-Math.sqrt(D))/2*a;
+    let x2 = (-1*b+Math.sqrt(D))/2*a;
+    let D_lietotajs = prompt("Ievadi D");
+    if (D<0 && D_lietotajs==D) alert("Malacis, tev izdevās!");
+    else if (D_lietotajs!=D) alert("Mēģini vēlreiz!");
+    else if (D>=0 && D_lietotajs==D){
+    let x1_lietotajs = prompt("Ievadi x1");
+    if (x1_lietotajs!=x1) alert("Mēģini vēlreiz!");
+    else {
+        let x2_lietotajs = prompt("Ievadi x2");
+        if (x2_lietotajs!=x2) alert("Mēģini vēlreiz!");
+        else {
+            alert("Malacis, tev izdevās!");
+            document.getElementById("diskriminants").innerHTML="D = "+D;
+            document.getElementById("sakne1").innerHTML="x1 = "+x1;
+            document.getElementById("sakne2").innerHTML="x2 = "+x2;
+        }
+        
+    }
+    
+    }
+    
+}
+
+
+</script>
+</html>
